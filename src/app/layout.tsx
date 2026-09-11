@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Roundup — a directory of good sites",
+  title: "Link Hall: A directory of good sites",
   description:
     "A hand-picked directory of good websites, sorted by category.",
 };

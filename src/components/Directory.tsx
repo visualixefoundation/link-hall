@@ -54,7 +54,7 @@ export default function Directory({ sites }: { sites: Site[] }) {
     <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:gap-14">
       {/* Sidebar / category rail */}
       <aside className="lg:sticky lg:top-16 lg:h-fit lg:w-48 lg:shrink-0">
-        <h1 className="font-display text-3xl italic text-paper">Roundup</h1>
+        <h1 className="font-display text-3xl italic text-paper">Link Hall </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted">
           A hand-picked list of good sites, sorted by category.
         </p>
