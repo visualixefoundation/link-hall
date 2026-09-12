@@ -147,38 +147,56 @@ export const sites: Site[] = [
 
   // Music
   {
+    name: "Spotify",
+    url: "https://open.spotify.com",
+    description: "Music streaming platform with millions of songs and podcasts.",
+    category: "Music",
+    tags: ["streaming", "playlists", "podcasts"],
+  },
+  {
+    name: "Audiomack",
+    url: "https://audiomack.com",
+    description: "Music streaming and discovery platform for artists and fans.",
+    category: "Music",
+    tags: ["streaming", "hip-hop", "artists"],
+  },
+
+  // Music Download
+  {
     name: "Spotidown",
     url: "https://spotidown.cc",
     description: "Download Spotify tracks and playlists as MP3.",
-    category: "Music",
+    category: "Music Download",
     tags: ["spotify", "download", "mp3"],
-  },
-  {
-    name: "TuneMyMusic",
-    url: "https://www.tunemymusic.com",
-    description: "Transfer playlists between music services.",
-    category: "Music",
-    tags: ["playlist", "transfer", "spotify"],
   },
   {
     name: "Tubidy",
     url: "https://tubidy.cc",
     description: "Search and download music and videos as MP3/MP4.",
-    category: "Music",
+    category: "Music Download",
     tags: ["mp3", "download", "videos"],
   },
   {
     name: "MP3Juice",
     url: "https://v6.mp3juice.za.com",
     description: "Free online MP3 search and download tool.",
-    category: "Music",
+    category: "Music Download",
     tags: ["mp3", "download", "search"],
+  },
+
+  // Playlist Transfer
+  {
+    name: "TuneMyMusic",
+    url: "https://www.tunemymusic.com",
+    description: "Transfer playlists between music services.",
+    category: "Playlist Transfer",
+    tags: ["playlist", "transfer", "spotify"],
   },
   {
     name: "Soundiiz",
     url: "https://soundiiz.com",
     description: "Transfer and manage playlists across music platforms.",
-    category: "Music",
+    category: "Playlist Transfer",
     tags: ["playlist", "transfer", "management"],
   },
 
