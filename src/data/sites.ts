@@ -200,6 +200,36 @@ export const sites: Site[] = [
     tags: ["playlist", "transfer", "management"],
   },
 
+  // Video downloaders
+  {
+    name: "VidsSave",
+    url: "https://vidssave.com",
+    description: "Online video downloader for multiple platforms.",
+    category: "Video downloaders",
+    tags: ["youtube", "download", "video"],
+  },
+  {
+    name: "Y2Mate",
+    url: "https://v38.www-y2mate.com",
+    description: "YouTube and video converter / downloader.",
+    category: "Video downloaders",
+    tags: ["youtube", "mp3", "mp4"],
+  },
+  {
+    name: "YT5s",
+    url: "https://yt5s.in",
+    description: "Free YouTube video and audio downloader.",
+    category: "Video downloaders",
+    tags: ["youtube", "download", "video"],
+  },
+  {
+    name: "SaveFrom",
+    url: "https://en1.savefrom.net",
+    description: "Download videos from YouTube and other sites.",
+    category: "Video downloaders",
+    tags: ["youtube", "download", "video"],
+  },
+
   // Dev & Tech
   {
     name: "Supabase",
