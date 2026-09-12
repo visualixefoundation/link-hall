@@ -97,21 +97,23 @@ export const sites: Site[] = [
     tags: ["football", "scores", "live"],
   },
   {
+    name: "SuperSport",
+    url: "https://supersport.com",
+    description: "Live sports coverage, scores and highlights.",
+    category: "Sports",
+    tags: ["football", "live", "scores"],
+  },
+
+  // Live football
+  {
     name: "FawaNews",
     url: "https://www.fawanews.sc",
     description: "Sports news and live match coverage.",
-    category: "Sports",
+    category: "Live football",
     tags: ["football", "news", "live"],
   },
 
   // Movies & Watch
-  {
-    name: "YTS",
-    url: "https://yts.gg",
-    description: "Torrent site focused on high-quality movie downloads.",
-    category: "Movies & Watch",
-    tags: ["movies", "torrents", "download"],
-  },
   {
     name: "MovieBox",
     url: "https://moviebox.co",
@@ -119,18 +121,27 @@ export const sites: Site[] = [
     category: "Movies & Watch",
     tags: ["movies", "streaming", "tv"],
   },
+
+  // Torrents
   {
-    name: "The Pirate Bay",
+    name: "YTS",
+    url: "https://yts.gg",
+    description: "Torrent site focused on high-quality movie downloads.",
+    category: "Torrents",
+    tags: ["movies", "torrents", "download"],
+  },
+  {
+    name: "Pirate Bay",
     url: "https://thepiratebay.org",
     description: "Classic torrent search engine.",
-    category: "Movies & Watch",
+    category: "Torrents",
     tags: ["torrents", "piracy", "search"],
   },
   {
-    name: "Pirate Proxy Bay",
+    name: "Pirates Bay",
     url: "https://www.pirateproxy-bay.com",
     description: "Proxy access to The Pirate Bay.",
-    category: "Movies & Watch",
+    category: "Torrents",
     tags: ["proxy", "torrents", "piratebay"],
   },
 
