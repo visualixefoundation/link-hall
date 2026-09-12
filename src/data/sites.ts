@@ -232,38 +232,40 @@ export const sites: Site[] = [
     tags: ["headphones", "audio", "apple"],
   },
   {
-    name: "American Eagle",
-    url: "https://www.ae.com",
-    description: "Casual clothing and accessories brand.",
-    category: "Shopping",
-    tags: ["fashion", "clothing", "jeans"],
-  },
-  {
     name: "Powerade",
     url: "https://www.powerade.com",
     description: "Sports drink brand by Coca-Cola.",
     category: "Shopping",
     tags: ["drinks", "sports", "hydration"],
   },
+
+  // Fashion
+  {
+    name: "American Eagle",
+    url: "https://www.ae.com",
+    description: "Casual clothing and accessories brand.",
+    category: "Fashion",
+    tags: ["fashion", "clothing", "jeans"],
+  },
   {
     name: "Mimoa",
     url: "https://mimoa.com",
     description: "Activewear and lifestyle brand by Georgina Rodríguez.",
-    category: "Shopping",
+    category: "Fashion",
     tags: ["activewear", "fashion", "women"],
   },
   {
     name: "Suvene",
     url: "https://suvene.de",
     description: "German streetwear brand focused on clean modern designs.",
-    category: "Shopping",
+    category: "Fashion",
     tags: ["streetwear", "hoodies", "joggers"],
   },
   {
     name: "FC Barcelona Store",
     url: "https://store.fcbarcelona.com",
     description: "Official FC Barcelona merchandise and kits.",
-    category: "Shopping",
+    category: "Fashion",
     tags: ["football", "merchandise", "barca"],
   },
 ];
