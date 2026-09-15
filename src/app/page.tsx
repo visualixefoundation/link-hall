@@ -4,10 +4,10 @@ import { sites } from "@/data/sites";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-ink">
+    <div className="min-h-screen bg-canvas">
       <Suspense
         fallback={
-          <div className="mx-auto max-w-5xl px-6 py-16 text-muted sm:px-10">
+          <div className="mx-auto max-w-6xl px-4 py-16 text-soft sm:px-6 lg:px-8">
             Loading directory…
           </div>
         }

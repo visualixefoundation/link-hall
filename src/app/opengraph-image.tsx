@@ -16,34 +16,34 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "72px",
-          backgroundColor: "#0F1115",
-          color: "#E7E5DE",
-          fontFamily: "Georgia, serif",
+          backgroundColor: "#F4F5F7",
+          color: "#111827",
+          fontFamily: "system-ui, sans-serif",
         }}
       >
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "16px",
-            marginBottom: "28px",
+            gap: "12px",
+            marginBottom: "20px",
           }}
         >
           <div
             style={{
-              width: "18px",
-              height: "18px",
+              width: "16px",
+              height: "16px",
               borderRadius: "999px",
-              backgroundColor: "#E8A33D",
+              backgroundColor: "#0D9488",
             }}
           />
           <div
             style={{
-              fontSize: 28,
-              letterSpacing: "0.08em",
+              fontSize: 24,
+              fontWeight: 600,
+              letterSpacing: "0.06em",
               textTransform: "uppercase",
-              color: "#9B9A93",
-              fontFamily: "system-ui, sans-serif",
+              color: "#0D9488",
             }}
           >
             Curated directory
@@ -51,21 +51,21 @@ export default function OpenGraphImage() {
         </div>
         <div
           style={{
-            fontSize: 88,
-            fontStyle: "italic",
+            fontSize: 84,
+            fontWeight: 700,
             lineHeight: 1.05,
-            marginBottom: "24px",
+            marginBottom: "20px",
+            letterSpacing: "-0.02em",
           }}
         >
           Link Hall
         </div>
         <div
           style={{
-            fontSize: 32,
-            color: "#9B9A93",
-            maxWidth: 780,
-            lineHeight: 1.35,
-            fontFamily: "system-ui, sans-serif",
+            fontSize: 30,
+            color: "#6B7280",
+            maxWidth: 820,
+            lineHeight: 1.4,
           }}
         >
           A hand-picked list of good websites, sorted by category — with search
