@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Site } from "@/data/sites";
 
 const DOT_COLORS = [
@@ -18,8 +19,9 @@ function colorForCategory(category: string, order: string[]) {
 }
 
 export default function Directory({ sites }: { sites: Site[] }) {
-  const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const categories = useMemo(() => {
     const seen: string[] = [];
@@ -28,6 +30,47 @@ export default function Directory({ sites }: { sites: Site[] }) {
     }
     return seen;
   }, [sites]);
+
+  const categoryFromUrl = searchParams.get("category");
+  const initialCategory =
+    categoryFromUrl && categories.includes(categoryFromUrl)
+      ? categoryFromUrl
+      : null;
+  const initialQuery = searchParams.get("q") ?? "";
+
+  const [query, setQuery] = useState(initialQuery);
+  const [activeCategory, setActiveCategory] = useState<string | null>(
+    initialCategory,
+  );
+
+  // Keep local state in sync when the user navigates (back/forward)
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    setActiveCategory(cat && categories.includes(cat) ? cat : null);
+    setQuery(searchParams.get("q") ?? "");
+  }, [searchParams, categories]);
+
+  const updateUrl = useCallback(
+    (nextQuery: string, nextCategory: string | null) => {
+      const params = new URLSearchParams();
+      const q = nextQuery.trim();
+      if (q) params.set("q", q);
+      if (nextCategory) params.set("category", nextCategory);
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [router, pathname],
+  );
+
+  const onQueryChange = (value: string) => {
+    setQuery(value);
+    updateUrl(value, activeCategory);
+  };
+
+  const onCategoryChange = (cat: string | null) => {
+    setActiveCategory(cat);
+    updateUrl(query, cat);
+  };
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -54,14 +97,19 @@ export default function Directory({ sites }: { sites: Site[] }) {
     <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:gap-14">
       {/* Sidebar / category rail */}
       <aside className="lg:sticky lg:top-16 lg:h-fit lg:w-48 lg:shrink-0">
-        <h1 className="font-display text-3xl italic text-paper">Link Hall </h1>
+        <h1 className="font-display text-3xl italic text-paper">Link Hall</h1>
         <p className="mt-2 text-sm leading-relaxed text-muted">
           A hand-picked list of good sites, sorted by category.
+        </p>
+        <p className="mt-3 text-xs leading-relaxed text-muted/80">
+          Browse by category or search by name and tag. Share a filtered view
+          with the link in your address bar.
         </p>
 
         <nav className="mt-8 flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
           <button
-            onClick={() => setActiveCategory(null)}
+            type="button"
+            onClick={() => onCategoryChange(null)}
             className={`whitespace-nowrap rounded-full px-3 py-1.5 text-left text-sm transition-colors lg:rounded-none lg:px-0 lg:py-1 ${
               activeCategory === null
                 ? "bg-surface2 text-paper lg:bg-transparent lg:text-amber"
@@ -72,8 +120,9 @@ export default function Directory({ sites }: { sites: Site[] }) {
           </button>
           {categories.map((cat) => (
             <button
+              type="button"
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => onCategoryChange(cat)}
               className={`flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-1.5 text-left text-sm transition-colors lg:rounded-none lg:px-0 lg:py-1 ${
                 activeCategory === cat
                   ? "bg-surface2 text-paper lg:bg-transparent lg:text-amber"
@@ -95,9 +144,9 @@ export default function Directory({ sites }: { sites: Site[] }) {
         <label className="block">
           <span className="sr-only">Search sites</span>
           <input
-            type="text"
+            type="search"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => onQueryChange(e.target.value)}
             placeholder="Search by name, category, or tag…"
             className="w-full rounded-lg border border-hairline bg-surface px-4 py-3 text-paper placeholder:text-muted focus:border-amber"
           />
@@ -111,13 +160,16 @@ export default function Directory({ sites }: { sites: Site[] }) {
           )}
 
           {[...grouped.entries()].map(([category, entries]) => (
-            <section key={category}>
+            <section key={category} id={`category-${encodeURIComponent(category)}`}>
               <div className="flex items-center gap-2">
                 <span
                   className="h-2 w-2 rounded-full"
-                  style={{ backgroundColor: colorForCategory(category, categories) }}
+                  style={{
+                    backgroundColor: colorForCategory(category, categories),
+                  }}
                 />
                 <h2 className="font-display text-xl text-paper">{category}</h2>
+                <span className="text-xs text-muted">({entries.length})</span>
               </div>
 
               <ul className="mt-4 divide-y divide-hairline border-t border-hairline">
