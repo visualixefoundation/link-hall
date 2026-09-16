@@ -116,19 +116,17 @@ export default function Directory({ sites }: { sites: Site[] }) {
               onClick={() => onCategoryChange(null)}
               className={`whitespace-nowrap rounded-full px-3.5 py-1.5 text-left text-sm font-medium transition-colors ${
                 activeCategory === null
-                  ? "bg-accent text-white shadow-sm dark:text-ink"
+                  ? "bg-accent text-white shadow-sm"
                   : "bg-surface text-soft ring-1 ring-border hover:bg-accent-soft hover:text-accent-hover"
               }`}
             >
-              All sites
+              All sites{" "}
               <span
-                className={`ml-1.5 tabular-nums ${
-                  activeCategory === null
-                    ? "text-white/80 dark:text-ink/70"
-                    : "text-faint"
+                className={`tabular-nums ${
+                  activeCategory === null ? "text-white/75" : "text-faint"
                 }`}
               >
-                {sites.length}
+                ({sites.length})
               </span>
             </button>
             {categories.map((cat) => {
@@ -140,17 +138,17 @@ export default function Directory({ sites }: { sites: Site[] }) {
                   onClick={() => onCategoryChange(cat)}
                   className={`whitespace-nowrap rounded-full px-3.5 py-1.5 text-left text-sm font-medium transition-colors ${
                     active
-                      ? "bg-accent text-white shadow-sm dark:text-ink"
+                      ? "bg-accent text-white shadow-sm"
                       : "bg-surface text-soft ring-1 ring-border hover:bg-accent-soft hover:text-accent-hover"
                   }`}
                 >
-                  {cat}
+                  {cat}{" "}
                   <span
-                    className={`ml-1.5 tabular-nums ${
-                      active ? "text-white/80 dark:text-ink/70" : "text-faint"
+                    className={`tabular-nums ${
+                      active ? "text-white/75" : "text-faint"
                     }`}
                   >
-                    {categoryCounts.get(cat) ?? 0}
+                    ({categoryCounts.get(cat) ?? 0})
                   </span>
                 </button>
               );
@@ -200,7 +198,7 @@ export default function Directory({ sites }: { sites: Site[] }) {
               >
                 <div className="mb-3 flex items-baseline gap-2">
                   <h2 className="text-lg font-semibold text-ink">{category}</h2>
-                  <span className="text-sm text-faint">{entries.length}</span>
+                  <span className="text-sm text-faint">({entries.length})</span>
                 </div>
 
                 <ul className="grid gap-3 sm:grid-cols-2">

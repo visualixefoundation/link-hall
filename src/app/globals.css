@@ -23,9 +23,10 @@
   --ink: 231 229 222;
   --soft: 155 154 147;
   --faint: 120 119 113;
-  --accent: 45 212 191;
+  /* Softer teal — less neon on dark backgrounds */
+  --accent: 20 184 166;
   --accent-soft: 19 78 74;
-  --accent-hover: 94 234 212;
+  --accent-hover: 45 212 191;
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.24), 0 1px 3px rgba(0, 0, 0, 0.2);
   --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
 }
