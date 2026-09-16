@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Site } from "@/data/sites";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Directory({ sites }: { sites: Site[] }) {
   const router = useRouter();
@@ -89,15 +90,18 @@ export default function Directory({ sites }: { sites: Site[] }) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
       {/* Header */}
-      <header className="mb-10 max-w-2xl">
-        <p className="text-sm font-medium text-accent">Curated directory</p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-          Link Hall
-        </h1>
-        <p className="mt-3 text-base leading-relaxed text-soft">
-          A hand-picked list of good sites, sorted by category. Browse filters
-          or search — share any view with the link in your address bar.
-        </p>
+      <header className="mb-10 flex items-start justify-between gap-4">
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium text-accent">Curated directory</p>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+            Link Hall
+          </h1>
+          <p className="mt-3 text-base leading-relaxed text-soft">
+            A hand-picked list of good sites, sorted by category. Browse filters
+            or search — share any view with the link in your address bar.
+          </p>
+        </div>
+        <ThemeToggle />
       </header>
 
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-10">
@@ -112,14 +116,16 @@ export default function Directory({ sites }: { sites: Site[] }) {
               onClick={() => onCategoryChange(null)}
               className={`whitespace-nowrap rounded-full px-3.5 py-1.5 text-left text-sm font-medium transition-colors ${
                 activeCategory === null
-                  ? "bg-accent text-white shadow-sm"
+                  ? "bg-accent text-white shadow-sm dark:text-ink"
                   : "bg-surface text-soft ring-1 ring-border hover:bg-accent-soft hover:text-accent-hover"
               }`}
             >
               All sites
               <span
                 className={`ml-1.5 tabular-nums ${
-                  activeCategory === null ? "text-white/80" : "text-faint"
+                  activeCategory === null
+                    ? "text-white/80 dark:text-ink/70"
+                    : "text-faint"
                 }`}
               >
                 {sites.length}
@@ -134,14 +140,14 @@ export default function Directory({ sites }: { sites: Site[] }) {
                   onClick={() => onCategoryChange(cat)}
                   className={`whitespace-nowrap rounded-full px-3.5 py-1.5 text-left text-sm font-medium transition-colors ${
                     active
-                      ? "bg-accent text-white shadow-sm"
+                      ? "bg-accent text-white shadow-sm dark:text-ink"
                       : "bg-surface text-soft ring-1 ring-border hover:bg-accent-soft hover:text-accent-hover"
                   }`}
                 >
                   {cat}
                   <span
                     className={`ml-1.5 tabular-nums ${
-                      active ? "text-white/80" : "text-faint"
+                      active ? "text-white/80 dark:text-ink/70" : "text-faint"
                     }`}
                   >
                     {categoryCounts.get(cat) ?? 0}
