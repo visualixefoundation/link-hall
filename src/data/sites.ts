@@ -41,6 +41,13 @@ export const sites: Site[] = [
     category: "Social",
     tags: ["chat", "gaming", "communities"],
   },
+  {
+    name: "Patreon — Gerdegotit",
+    url: "https://www.patreon.com/Gerdegotit",
+    description: "Creator page for Gerdegotit on Patreon.",
+    category: "Social",
+    tags: ["patreon", "creator", "support"],
+  },
 
   // AI
   {
@@ -77,6 +84,55 @@ export const sites: Site[] = [
     description: "AI music generator — create songs from text prompts.",
     category: "AI",
     tags: ["music", "ai", "songs", "generator"],
+  },
+  {
+    name: "Kimi",
+    url: "https://www.kimi.com",
+    description: "Moonshot AI's assistant with long context, agents, and coding tools.",
+    category: "AI",
+    tags: ["chatbot", "agent", "moonshot"],
+  },
+  {
+    name: "Manus",
+    url: "https://manus.im",
+    description: "General-purpose AI agent that plans and finishes real tasks for you.",
+    category: "AI",
+    tags: ["agent", "automation", "assistant"],
+  },
+  {
+    name: "Meta AI",
+    url: "https://www.meta.ai",
+    description: "Meta's free AI assistant across chat, image, and search.",
+    category: "AI",
+    tags: ["chatbot", "meta", "assistant"],
+  },
+  {
+    name: "Leonardo AI",
+    url: "https://leonardo.ai",
+    description: "AI image generation platform for art, design, and assets.",
+    category: "AI",
+    tags: ["image", "art", "generator"],
+  },
+  {
+    name: "Gemini",
+    url: "https://gemini.google.com",
+    description: "Google's multimodal AI assistant.",
+    category: "AI",
+    tags: ["chatbot", "google", "assistant"],
+  },
+  {
+    name: "Adobe Firefly",
+    url: "https://firefly.adobe.com",
+    description: "Adobe's generative AI for images, video, and design.",
+    category: "AI",
+    tags: ["image", "adobe", "generator"],
+  },
+  {
+    name: "NotebookLM",
+    url: "https://notebooklm.google.com",
+    description: "Google's AI notebook for researching and chatting with your documents.",
+    category: "AI",
+    tags: ["notes", "research", "google", "documents"],
   },
 
   // Tools
@@ -142,6 +198,57 @@ export const sites: Site[] = [
     description: "AI tool to remove unwanted objects, people, or text from photos.",
     category: "Tools",
     tags: ["ai", "photo", "remove", "edit"],
+  },
+  {
+    name: "SkySnail",
+    url: "https://skysnail.io",
+    description: "AI thumbnail generator for YouTube and social video covers.",
+    category: "Tools",
+    tags: ["thumbnail", "youtube", "ai", "design"],
+  },
+  {
+    name: "ViralityAI",
+    url: "https://viralityai.net",
+    description: "Find viral content ideas across Instagram, TikTok, and YouTube by keyword.",
+    category: "Tools",
+    tags: ["viral", "content", "social", "research"],
+  },
+  {
+    name: "Pomelli",
+    url: "https://labs.google.com/pomelli/about",
+    description: "Google Labs AI tool for on-brand marketing campaigns and creatives.",
+    category: "Tools",
+    tags: ["marketing", "google", "brand", "ai"],
+  },
+
+  // Learning
+  {
+    name: "Google Classroom",
+    url: "https://classroom.google.com",
+    description: "Free classroom hub for assignments, materials, and class communication.",
+    category: "Learning",
+    tags: ["education", "google", "school"],
+  },
+  {
+    name: "Khan Academy",
+    url: "https://www.khanacademy.org",
+    description: "Free lessons and practice across math, science, and more.",
+    category: "Learning",
+    tags: ["education", "courses", "free"],
+  },
+  {
+    name: "Codecademy",
+    url: "https://www.codecademy.com",
+    description: "Interactive coding courses for web, data, and programming skills.",
+    category: "Learning",
+    tags: ["coding", "courses", "programming"],
+  },
+  {
+    name: "Alison",
+    url: "https://alison.com",
+    description: "Free online courses and certificates across many subjects.",
+    category: "Learning",
+    tags: ["courses", "certificates", "education"],
   },
 
   // Sports
@@ -215,6 +322,13 @@ export const sites: Site[] = [
     description: "Music streaming and discovery platform for artists and fans.",
     category: "Music",
     tags: ["streaming", "hip-hop", "artists"],
+  },
+  {
+    name: "YouTube Music",
+    url: "https://music.youtube.com",
+    description: "Google's music streaming service with songs, albums, and radio.",
+    category: "Music",
+    tags: ["streaming", "google", "playlists"],
   },
 
   // Music Download
@@ -291,6 +405,13 @@ export const sites: Site[] = [
     description: "Clean, open-source media downloader — paste a link, save video or audio.",
     category: "Video downloaders",
     tags: ["download", "video", "audio", "privacy"],
+  },
+  {
+    name: "VideoDownloader.site",
+    url: "https://videodownloader.site",
+    description: "Online video downloader for movies and web video links.",
+    category: "Video downloaders",
+    tags: ["download", "video", "movies"],
   },
 
   // Dev & Tech
@@ -383,5 +504,12 @@ export const sites: Site[] = [
     description: "Viral stories, art, and entertainment from around the web.",
     category: "Fun",
     tags: ["viral", "stories", "art", "entertainment"],
+  },
+  {
+    name: "Now I Know",
+    url: "https://nowiknow.com",
+    description: "Daily newsletter with one surprising true fact and the story behind it.",
+    category: "Fun",
+    tags: ["newsletter", "trivia", "facts"],
   },
 ];
