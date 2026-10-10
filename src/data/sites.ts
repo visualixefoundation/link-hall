@@ -87,6 +87,20 @@ export const sites: Site[] = [
     category: "Tools",
     tags: ["design", "graphics", "templates"],
   },
+  {
+    name: "PhoText",
+    url: "https://phototext.shop",
+    description: "AI tool to click and edit text inside images and screenshots.",
+    category: "Tools",
+    tags: ["ai", "image", "text edit", "ocr"],
+  },
+  {
+    name: "SoBrief",
+    url: "https://sobrief.com",
+    description: "AI-powered book summaries in text and audio, across many languages.",
+    category: "Tools",
+    tags: ["books", "summaries", "ai", "reading"],
+  },
 
   // Sports
   {
@@ -229,6 +243,13 @@ export const sites: Site[] = [
     category: "Video downloaders",
     tags: ["youtube", "download", "video"],
   },
+  {
+    name: "Cobalt",
+    url: "https://cobalt.tools",
+    description: "Clean, open-source media downloader — paste a link, save video or audio.",
+    category: "Video downloaders",
+    tags: ["download", "video", "audio", "privacy"],
+  },
 
   // Dev & Tech
   {
@@ -251,6 +272,13 @@ export const sites: Site[] = [
     description: "Code hosting and collaboration platform for developers.",
     category: "Dev & Tech",
     tags: ["git", "code", "open-source"],
+  },
+  {
+    name: "Koha",
+    url: "https://koha.wtf",
+    description: "Personal site of AI educator and developer advocate Joshua Omobola.",
+    category: "Dev & Tech",
+    tags: ["portfolio", "ai", "developer", "education"],
   },
 
   // Shopping
@@ -297,5 +325,14 @@ export const sites: Site[] = [
     description: "Official FC Barcelona merchandise and kits.",
     category: "Fashion",
     tags: ["football", "merchandise", "barca"],
+  },
+
+  // Fun
+  {
+    name: "FakeUpdate",
+    url: "https://fakeupdate.net",
+    description: "Full-screen fake OS update screens for harmless pranks.",
+    category: "Fun",
+    tags: ["prank", "windows", "macos", "joke"],
   },
 ];
