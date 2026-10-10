@@ -291,6 +291,13 @@ export const sites: Site[] = [
     category: "Movies & Watch",
     tags: ["movies", "streaming", "tv"],
   },
+  {
+    name: "VideoDownloader.site",
+    url: "https://videodownloader.site",
+    description: "Direct movie and video search / download companion.",
+    category: "Movies & Watch",
+    tags: ["movies", "download", "search", "video"],
+  },
 
   // Torrents
   {
@@ -419,13 +426,6 @@ export const sites: Site[] = [
     description: "Clean, open-source media downloader — paste a link, save video or audio.",
     category: "Video downloaders",
     tags: ["download", "video", "audio", "privacy"],
-  },
-  {
-    name: "VideoDownloader.site",
-    url: "https://videodownloader.site",
-    description: "Online video downloader for movies and web video links.",
-    category: "Video downloaders",
-    tags: ["download", "video", "movies"],
   },
 
   // Dev & Tech
