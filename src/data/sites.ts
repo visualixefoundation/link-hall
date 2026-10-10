@@ -71,6 +71,13 @@ export const sites: Site[] = [
     category: "AI",
     tags: ["search", "research", "answers"],
   },
+  {
+    name: "Suno",
+    url: "https://suno.com",
+    description: "AI music generator — create songs from text prompts.",
+    category: "AI",
+    tags: ["music", "ai", "songs", "generator"],
+  },
 
   // Tools
   {
@@ -100,6 +107,41 @@ export const sites: Site[] = [
     description: "AI-powered book summaries in text and audio, across many languages.",
     category: "Tools",
     tags: ["books", "summaries", "ai", "reading"],
+  },
+  {
+    name: "PDFDrive",
+    url: "https://www.pdfdrive.com",
+    description: "Search and download free PDF books and documents.",
+    category: "Tools",
+    tags: ["pdf", "books", "download", "ebooks"],
+  },
+  {
+    name: "PaperAnimator",
+    url: "https://paperanimator.com",
+    description: "Turn photos into paper cut-out and fold-out animations in the browser.",
+    category: "Tools",
+    tags: ["animation", "paper", "design", "video"],
+  },
+  {
+    name: "FilePizza",
+    url: "https://file.pizza",
+    description: "Peer-to-peer file transfer in the browser — no cloud upload required.",
+    category: "Tools",
+    tags: ["file transfer", "p2p", "share", "privacy"],
+  },
+  {
+    name: "Screen Studio",
+    url: "https://screen.studio",
+    description: "macOS screen recorder that auto-zooms and polishes demos in minutes.",
+    category: "Tools",
+    tags: ["screen recording", "mac", "demos", "video"],
+  },
+  {
+    name: "Cleanup.pictures",
+    url: "https://cleanup.pictures",
+    description: "AI tool to remove unwanted objects, people, or text from photos.",
+    category: "Tools",
+    tags: ["ai", "photo", "remove", "edit"],
   },
 
   // Sports
@@ -334,5 +376,12 @@ export const sites: Site[] = [
     description: "Full-screen fake OS update screens for harmless pranks.",
     category: "Fun",
     tags: ["prank", "windows", "macos", "joke"],
+  },
+  {
+    name: "Bored Panda",
+    url: "https://www.boredpanda.com",
+    description: "Viral stories, art, and entertainment from around the web.",
+    category: "Fun",
+    tags: ["viral", "stories", "art", "entertainment"],
   },
 ];
