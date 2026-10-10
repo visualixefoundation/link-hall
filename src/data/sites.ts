@@ -48,6 +48,13 @@ export const sites: Site[] = [
     category: "Social",
     tags: ["patreon", "creator", "support"],
   },
+  {
+    name: "Dad, How Do I?",
+    url: "https://www.youtube.com/channel/UCNepEAWZH0TBu7dkxIbluDw",
+    description: "Practical how-to videos on everyday skills — ties, tires, cooking, money, and more.",
+    category: "Social",
+    tags: ["youtube", "howto", "tutorials", "dad"],
+  },
 
   // AI
   {
@@ -292,6 +299,13 @@ export const sites: Site[] = [
     description: "Torrent site focused on high-quality movie downloads.",
     category: "Torrents",
     tags: ["movies", "torrents", "download"],
+  },
+  {
+    name: "YTS — Browse Movies",
+    url: "https://yts.gg/browse-movies",
+    description: "Direct browse page for searching and filtering YTS movie torrents.",
+    category: "Torrents",
+    tags: ["movies", "torrents", "search", "browse"],
   },
   {
     name: "Pirate Bay",
